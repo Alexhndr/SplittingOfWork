@@ -14,7 +14,7 @@ const MAX_NUM_OF_THREADS: i64 = 64;
 
 // Splitting of computational work
 fn split_comp_work<T, R>(vector: Vec<T>, function: Function<T, R>) -> Vec<R>
-    where T: 'static + Send + Clone, R: 'static + Default + Clone + Send {
+    where T: 'static + Clone + Send, R: 'static + Default + Clone + Send {
     
     // If length of the vector less than the threshold then no threads are needed
     if vector.len() < THRESHOLD as usize {
