@@ -120,6 +120,30 @@ fn is_even(num: i64) -> bool {
 }
 
 fn main() {
+    test_a();
+    test_b();
+}
+
+fn test_a() {
+    
+    // Printing debugging information
+    println!("Starting computational work...");
+    
+    // Example of client's code
+    let vector = vec![1, 2, 3, 4];
+    
+    let result = split_comp_work(vector, is_even);
+    
+    let result_for_check = vec![false, true, false, true];
+    
+    // Checking result
+    assert_eq!(result, result_for_check);
+    
+    // Printing debugging information
+    println!("Computational work has been completed");
+}
+
+fn test_b() {
     
     // Printing debugging information
     println!("Starting computational work...");
